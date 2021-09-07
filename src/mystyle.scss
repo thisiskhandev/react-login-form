@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+$primary-color: #2980b9;
+$neon-color: #39ff14;
+@mixin centerprop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+*:not(input) {
+  color: #fff;
+}
+body {
+  background-color: #212121;
+}
+form {
+  @include centerprop();
+  height: 50vh;
+  background: #2980b9;
+  margin: 100px 450px;
+  margin-bottom: 60px;
+}
+input,
+label {
+  font-size: 16px;
+}
+input {
+  outline: none;
+  border: 0;
+  padding: 10px;
+  margin-left: 5px;
+  &[type="password"] {
+    margin-top: 5px;
+  }
+  &[type="email"] {
+    margin-left: 31.5px;
+  }
+}
+button {
+  margin-top: 20px;
+  width: 56%;
+  line-height: 2.5;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+  &:hover {
+    background: #fff;
+    color: $primary-color;
+    transition: all 0.3s;
+  }
+}
+div.result {
+  transform: translate(40%, 0);
+  code {
+    color: $neon-color;
+  }
+}
